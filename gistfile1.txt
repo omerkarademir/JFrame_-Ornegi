@@ -1,0 +1,27 @@
+package finalsınavıcalısma;
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class uygulama1 {
+
+	
+	public static void main(String[] args) {
+		JFrame bizimframe=new JFrame("bizim form");
+		bizimframe.setSize(300,100);
+		bizimframe.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+		JButton btnGoster=new JButton("Göster");
+		final JTextField txtIsim=new JTextField(15);
+		btnGoster.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+				JOptionPane.showMessageDialog(null, txtIsim.getText());
+			}
+		});
+		bizimframe.getContentPane().setLayout(new FlowLayout());
+		bizimframe.getContentPane().add(txtIsim);
+		bizimframe.getContentPane().add(btnGoster);
+		bizimframe.setVisible(true);
+	}
+}
